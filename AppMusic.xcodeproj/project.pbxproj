@@ -13,9 +13,6 @@
 		90CA842128E58041008208D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CA841F28E58041008208D9 /* Main.storyboard */; };
 		90CA842328E58042008208D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90CA842228E58042008208D9 /* Assets.xcassets */; };
 		90CA842628E58042008208D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90CA842428E58042008208D9 /* LaunchScreen.storyboard */; };
-		90CA843128E58042008208D9 /* AppMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CA843028E58042008208D9 /* AppMusicTests.swift */; };
-		90CA843B28E58042008208D9 /* AppMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CA843A28E58042008208D9 /* AppMusicUITests.swift */; };
-		90CA843D28E58042008208D9 /* AppMusicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90CA843C28E58042008208D9 /* AppMusicUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +42,7 @@
 		90CA842528E58042008208D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90CA842728E58042008208D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90CA842C28E58042008208D9 /* AppMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90CA843028E58042008208D9 /* AppMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMusicTests.swift; sourceTree = "<group>"; };
 		90CA843628E58042008208D9 /* AppMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		90CA843A28E58042008208D9 /* AppMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMusicUITests.swift; sourceTree = "<group>"; };
-		90CA843C28E58042008208D9 /* AppMusicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMusicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				90CA841828E58041008208D9 /* AppMusic */,
-				90CA842F28E58042008208D9 /* AppMusicTests */,
-				90CA843928E58042008208D9 /* AppMusicUITests */,
 				90CA841728E58041008208D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,23 +100,6 @@
 				90CA842728E58042008208D9 /* Info.plist */,
 			);
 			path = AppMusic;
-			sourceTree = "<group>";
-		};
-		90CA842F28E58042008208D9 /* AppMusicTests */ = {
-			isa = PBXGroup;
-			children = (
-				90CA843028E58042008208D9 /* AppMusicTests.swift */,
-			);
-			path = AppMusicTests;
-			sourceTree = "<group>";
-		};
-		90CA843928E58042008208D9 /* AppMusicUITests */ = {
-			isa = PBXGroup;
-			children = (
-				90CA843A28E58042008208D9 /* AppMusicUITests.swift */,
-				90CA843C28E58042008208D9 /* AppMusicUITestsLaunchTests.swift */,
-			);
-			path = AppMusicUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CA843128E58042008208D9 /* AppMusicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90CA843D28E58042008208D9 /* AppMusicUITestsLaunchTests.swift in Sources */,
-				90CA843B28E58042008208D9 /* AppMusicUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
