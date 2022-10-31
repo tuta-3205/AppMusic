@@ -1,5 +1,5 @@
 import UIKit
-import AVFoundation
+import MediaPlayer
 
 final class DetailViewController: UIViewController {
     @IBOutlet private weak var imgMusic: UIImageView!
@@ -41,6 +41,23 @@ final class DetailViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             self.updateSlider()
         }
+        
+        guard let image = UIImage(named: DataMusic.musics[index ?? 0].imageUrl ?? "") else {
+            return
+        }
+        
+        let artWork = MPMediaItemArtwork(boundsSize: image.size, requestHandler: {
+            (size) -> UIImage in return image
+        })
+        
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = [
+            MPMediaItemPropertyTitle: DataMusic.musics[index ?? 0].name ?? "",
+            MPMediaItemPropertyArtist: DataMusic.musics[index ?? 0].author ?? "",
+            MPMediaItemPropertyPlaybackDuration: player.getDuration(),
+            MPMediaItemPropertyArtwork: artWork
+        ]
+                    
+        UIApplication.shared.beginReceivingRemoteControlEvents()
     }
   
     
@@ -80,4 +97,26 @@ final class DetailViewController: UIViewController {
         player.setCurrentTime(TimeInterval(musicTime?.value ?? 0))
         player.play()
     }
+    
+    override func remoteControlReceived(with event: UIEvent?) {
+        if let event = event {
+           if event.type == .remoteControl {
+               switch event.subtype {
+               case.remoteControlPlay:
+                   player.play()
+               case.remoteControlStop:
+                   player.stop()
+               case.remoteControlPause:
+                   player.pause()
+               case.remoteControlNextTrack:
+                   index = ((index ?? 0) + 1 + 3) % 3
+                   self.viewDidLoad()
+               case.remoteControlPreviousTrack:
+                   index = ((index ?? 0) - 1 + 3) % 3
+                   self.viewDidLoad()
+               default: break
+               }
+             }
+       }
+     }
 }
